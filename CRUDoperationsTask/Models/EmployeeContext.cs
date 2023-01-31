@@ -9,7 +9,7 @@ namespace CRUDoperationsTask.Models
 {
     public class EmployeeContext
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=Employeedb;Integrated Security=true");
+        SqlConnection con = new SqlConnection(@"Data Source= ;Initial Catalog=Employeedb;Integrated Security=true");
         public List<EmployeeModel> getAllEmployees()
         {
             List<EmployeeModel> listEmp = new List<EmployeeModel>();
