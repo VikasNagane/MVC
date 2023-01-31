@@ -1,0 +1,15 @@
+﻿@model CRUDoperationsTask.Models.EmployeeModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete this Record</h2>
+
+@Model.EmpID <br>
+@Model.EmpName <br>
+@Model.Email <br>
+@Model.ContactNo <br>
+
+<form action="~/Home/Delete/@Model.EmpID" method="post" >
+    <input type="submit" class="btn btn-danger"  value="Delete" />
+</form>

@@ -1,0 +1,35 @@
+﻿
+@model List<CRUDoperationsTask.Models.EmployeeModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Home</h2>
+
+<table class="table-striped table-bordered table-responsive table table-condensed">
+
+    <tr>
+        <th>CandidateID</th>
+        <th>EmpID</th>
+        <th>EmpName</th>
+        <th>Email</th>
+        <th>ContactNo</th>
+        <th>Operations</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CandidateID </td>
+            <td>@item.EmpID</td>
+            <td>@item.EmpName</td>
+            <td>@item.Email</td>
+            <td>@item.ContactNo</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EmpID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmpID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+<div> @Html.ActionLink("ADD Employee", "Add",null, new { @class = "btn btn-success" })  </div>
